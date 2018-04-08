@@ -1,0 +1,79 @@
+.app {
+  text-align: center;
+}
+
+.courses {
+  .course {
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__status {
+      float: right;
+      color: #079a29;
+    }
+
+    &__info {
+      display: flex;
+      font-size: 0.95em;
+      flex-wrap: wrap;
+      margin-left: 0;
+      width: 100%;
+
+      & > span {
+        width: 50%;
+        line-height: 20px;
+        overflow-y: hidden;
+        transition: line-height 0.9s;
+      }
+    }
+
+    &__total-label
+    &__final-label {
+      font-weight: bold;
+    }
+
+    &--collapsed {
+      .partial {
+        padding: 0;
+        border: 0;
+        span {
+          line-height: 0px;
+        }
+      }
+
+      .course__info span {
+        line-height: 0px;
+      }
+    }
+  }
+}
+
+.partials {
+  .partial {
+    padding: 5px 16px;
+    transition: padding 0.9s;
+
+    span {
+      display: block;
+      line-height: 23px;
+      overflow-y: hidden;
+      transition: line-height 0.9s;
+    }
+
+    &__title {
+      float: left;
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__markBox {
+      float: right;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

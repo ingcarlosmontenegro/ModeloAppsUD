@@ -1,0 +1,33 @@
+<ion-view view-title="Notas">
+  <ion-content>
+    <ul class="courses list">
+      <li class="course course--collapsed" ng-repeat="grade in grades">
+        <div class="course__info item item-divider" ng-click="toggleAccordionItem($event)">
+          <h2 class="course__title">{{grade.course.name}}</h2>
+          <div class="course__info">
+            <span class="course__group">Grupo {{grade.course.group}}</span>
+            <span class="course__status">{{grade.course.status}}</span>
+            <span class="course__total-label">Acu: <span class="course__total">{{grade.course.current}}</span></span>
+            <span class="course__final-label">Def: <span class="course__final">{{grade.course.final}}</span></span>
+          </div>
+        </div>
+          <ul class="partials list">
+            <li
+              class="partial item"
+              ng-repeat="partial in grade.course.partials"
+            >
+              <dl class="partial__list">
+                <dt class="partial__title">
+                  <span>{{partial.name}}</span>
+                </dt>
+                <dd class="partial__markBox">
+                  <span>{{partial.percent}}</span>
+                  <span>{{partial.value}}</span>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

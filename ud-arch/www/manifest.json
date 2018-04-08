@@ -1,0 +1,11 @@
+{
+  "name": "Cóndor App",
+  "short_name": "Condor App",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "166x166",
+    "type": "image/png"
+  }]
+}
